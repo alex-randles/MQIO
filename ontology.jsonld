@@ -66,7 +66,7 @@
   "@id" : "https://www.w3.org/MQIO/#",
   "@type" : [ "http://www.w3.org/2002/07/owl#Ontology" ],
   "http://purl.org/dc/terms/abstract" : [ {
-    "@value" : "The Mapping Quality Improvement Ontology (MQIO) provides a set of classes, properties, and restrictions that can be used to represent and interchange provenance and metadata information relating to the quality assessment, quality refinement and quality validation of mapping definitions used to generate Linked data datasets. It can also be specialized to create new classes and properties to model provenance and metadata information for domain specific mapping languages."
+    "@value" : "The Mapping Quality Improvement Ontology (MQIO) provides a set of classes, properties, and restrictions that can be used to represent and interchange provenance and metadata information relating to the creation, quality assessment, refinement and validation of mapping artefacts used to link and generate linked data datasets. It can also be specialized to create new classes and properties to model provenance and metadata information for domain specific mapping languages."
   } ],
   "http://purl.org/dc/terms/created" : [ {
     "@value" : "1 June 2020"
@@ -97,7 +97,7 @@
   "@id" : "https://www.w3.org/MQIO/#MappingArtefact",
   "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
   "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
-    "@value" : "A mapping artefact contains rules which create or link linked data datasets."
+    "@value" : "A mapping artefact contains rules which link or create linked data datasets."
   } ],
   "http://www.w3.org/2000/01/rdf-schema#label" : [ {
     "@language" : "en",
@@ -205,7 +205,7 @@
   "@id" : "https://www.w3.org/MQIO/#hasConfidence",
   "@type" : [ "http://www.w3.org/2002/07/owl#DatatypeProperty" ],
   "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
-    "@value" : "The likelihood of refinement will resolve the violation."
+    "@value" : "The likelihood a refinement will resolve the violation."
   } ],
   "http://www.w3.org/2000/01/rdf-schema#domain" : [ {
     "@id" : "https://www.w3.org/MQIO/#MappingRefinement"
@@ -477,7 +477,7 @@
   "@id" : "https://www.w3.org/MQIO/#usedTool",
   "@type" : [ "http://www.w3.org/2002/07/owl#DatatypeProperty" ],
   "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
-    "@value" : "A tool which has been used to create the mapping."
+    "@value" : "A tool which has been used to create a mapping."
   } ],
   "http://www.w3.org/2000/01/rdf-schema#domain" : [ {
     "@id" : "https://www.w3.org/MQIO/#MappingArtefact"

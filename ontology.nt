@@ -1,5 +1,5 @@
 <https://www.w3.org/MQIO/#> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Ontology> .
-<https://www.w3.org/MQIO/#> <http://purl.org/dc/terms/abstract> "The Mapping Quality Improvement Ontology (MQIO) provides a set of classes, properties, and restrictions that can be used to represent and interchange provenance and metadata information relating to the quality assessment, quality refinement and quality validation of mapping definitions used to generate Linked data datasets. It can also be specialized to create new classes and properties to model provenance and metadata information for domain specific mapping languages." .
+<https://www.w3.org/MQIO/#> <http://purl.org/dc/terms/abstract> "The Mapping Quality Improvement Ontology (MQIO) provides a set of classes, properties, and restrictions that can be used to represent and interchange provenance and metadata information relating to the creation, quality assessment, refinement and validation of mapping artefacts used to link and generate linked data datasets. It can also be specialized to create new classes and properties to model provenance and metadata information for domain specific mapping languages." .
 <https://www.w3.org/MQIO/#> <http://purl.org/dc/terms/created> "1 June 2020" .
 <https://www.w3.org/MQIO/#> <http://purl.org/dc/terms/creator> "Ademar Crotti Junior" .
 <https://www.w3.org/MQIO/#> <http://purl.org/dc/terms/creator> "Alex Randles" .
@@ -168,7 +168,7 @@ _:genid1 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/20
 <https://www.w3.org/MQIO/#hasConfidence> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> .
 <https://www.w3.org/MQIO/#hasConfidence> <http://www.w3.org/2000/01/rdf-schema#domain> <https://www.w3.org/MQIO/#MappingRefinement> .
 <https://www.w3.org/MQIO/#hasConfidence> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.w3.org/2001/XMLSchema#double> .
-<https://www.w3.org/MQIO/#hasConfidence> <http://www.w3.org/2000/01/rdf-schema#comment> "The likelihood of refinement will resolve the violation." .
+<https://www.w3.org/MQIO/#hasConfidence> <http://www.w3.org/2000/01/rdf-schema#comment> "The likelihood a refinement will resolve the violation." .
 <https://www.w3.org/MQIO/#hasConfidence> <http://www.w3.org/2000/01/rdf-schema#label> "hasConfidence"@en .
 # 
 # https://www.w3.org/MQIO/#hasLiteralValue
@@ -224,7 +224,7 @@ _:genid1 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/20
 <https://www.w3.org/MQIO/#usedTool> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> .
 <https://www.w3.org/MQIO/#usedTool> <http://www.w3.org/2000/01/rdf-schema#domain> <https://www.w3.org/MQIO/#MappingArtefact> .
 <https://www.w3.org/MQIO/#usedTool> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.w3.org/2001/XMLSchema#string> .
-<https://www.w3.org/MQIO/#usedTool> <http://www.w3.org/2000/01/rdf-schema#comment> "A tool which has been used to create the mapping." .
+<https://www.w3.org/MQIO/#usedTool> <http://www.w3.org/2000/01/rdf-schema#comment> "A tool which has been used to create a mapping." .
 <https://www.w3.org/MQIO/#usedTool> <http://www.w3.org/2000/01/rdf-schema#label> "usedTool"@en .
 # 
 # 
@@ -267,7 +267,7 @@ _:genid1 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/20
 <https://www.w3.org/MQIO/#MappingArtefact> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
 <https://www.w3.org/MQIO/#MappingArtefact> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://www.w3.org/ns/prov#Entity> .
 <https://www.w3.org/MQIO/#MappingArtefact> <http://www.w3.org/2002/07/owl#disjointWith> <https://www.w3.org/MQIO/#MappingValidationReport> .
-<https://www.w3.org/MQIO/#MappingArtefact> <http://www.w3.org/2000/01/rdf-schema#comment> "A mapping artefact contains rules which create or link linked data datasets." .
+<https://www.w3.org/MQIO/#MappingArtefact> <http://www.w3.org/2000/01/rdf-schema#comment> "A mapping artefact contains rules which link or create linked data datasets." .
 <https://www.w3.org/MQIO/#MappingArtefact> <http://www.w3.org/2000/01/rdf-schema#label> "MappingArtefact"@en .
 # 
 # https://www.w3.org/MQIO/#MappingAssessment

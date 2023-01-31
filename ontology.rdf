@@ -11,7 +11,7 @@
      xmlns:vann="http://purl.org/vocab/vann/"
      xmlns:terms="http://purl.org/dc/terms/">
     <owl:Ontology rdf:about="https://www.w3.org/MQIO/#">
-        <terms:abstract>The Mapping Quality Improvement Ontology (MQIO) provides a set of classes, properties, and restrictions that can be used to represent and interchange provenance and metadata information relating to the quality assessment, quality refinement and quality validation of mapping definitions used to generate Linked data datasets. It can also be specialized to create new classes and properties to model provenance and metadata information for domain specific mapping languages.</terms:abstract>
+        <terms:abstract>The Mapping Quality Improvement Ontology (MQIO) provides a set of classes, properties, and restrictions that can be used to represent and interchange provenance and metadata information relating to the creation, quality assessment, refinement and validation of mapping artefacts used to link and generate linked data datasets. It can also be specialized to create new classes and properties to model provenance and metadata information for domain specific mapping languages.</terms:abstract>
         <terms:created>1 June 2020</terms:created>
         <terms:creator>Ademar Crotti Junior</terms:creator>
         <terms:creator>Alex Randles</terms:creator>
@@ -295,7 +295,7 @@
     <owl:DatatypeProperty rdf:about="https://www.w3.org/MQIO/#hasConfidence">
         <rdfs:domain rdf:resource="https://www.w3.org/MQIO/#MappingRefinement"/>
         <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#double"/>
-        <rdfs:comment>The likelihood of refinement will resolve the violation.</rdfs:comment>
+        <rdfs:comment>The likelihood a refinement will resolve the violation.</rdfs:comment>
         <rdfs:label xml:lang="en">hasConfidence</rdfs:label>
     </owl:DatatypeProperty>
     
@@ -391,7 +391,7 @@
     <owl:DatatypeProperty rdf:about="https://www.w3.org/MQIO/#usedTool">
         <rdfs:domain rdf:resource="https://www.w3.org/MQIO/#MappingArtefact"/>
         <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
-        <rdfs:comment>A tool which has been used to create the mapping.</rdfs:comment>
+        <rdfs:comment>A tool which has been used to create a mapping.</rdfs:comment>
         <rdfs:label xml:lang="en">usedTool</rdfs:label>
     </owl:DatatypeProperty>
     
@@ -478,7 +478,7 @@
     <owl:Class rdf:about="https://www.w3.org/MQIO/#MappingArtefact">
         <rdfs:subClassOf rdf:resource="http://www.w3.org/ns/prov#Entity"/>
         <owl:disjointWith rdf:resource="https://www.w3.org/MQIO/#MappingValidationReport"/>
-        <rdfs:comment>A mapping artefact contains rules which create or link linked data datasets.</rdfs:comment>
+        <rdfs:comment>A mapping artefact contains rules which link or create linked data datasets.</rdfs:comment>
         <rdfs:label xml:lang="en">MappingArtefact</rdfs:label>
     </owl:Class>
     

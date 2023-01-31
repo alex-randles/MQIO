@@ -24,12 +24,12 @@
       }, {
         "identifier" : "creator",
         "language" : "undefined",
-        "value" : "Alex Randles",
+        "value" : "Ademar Crotti Junior",
         "type" : "label"
       }, {
         "identifier" : "creator",
         "language" : "undefined",
-        "value" : "Ademar Crotti Junior",
+        "value" : "Alex Randles",
         "type" : "label"
       } ],
       "created" : [ {
@@ -44,12 +44,6 @@
         "value" : "mqio",
         "type" : "label"
       } ],
-      "versionInfo" : [ {
-        "identifier" : "versionInfo",
-        "language" : "undefined",
-        "value" : "1 June 2020",
-        "type" : "label"
-      } ],
       "preferredNamespaceUri" : [ {
         "identifier" : "preferredNamespaceUri",
         "language" : "undefined",
@@ -59,7 +53,13 @@
       "abstract" : [ {
         "identifier" : "abstract",
         "language" : "undefined",
-        "value" : "The Mapping Quality Improvement Ontology (MQIO) provides a set of classes, properties, and restrictions that can be used to represent and interchange provenance and metadata information relating to the quality assessment, quality refinement and quality validation of mapping definitions used to generate Linked data datasets. It can also be specialized to create new classes and properties to model provenance and metadata information for domain specific mapping languages.",
+        "value" : "The Mapping Quality Improvement Ontology (MQIO) provides a set of classes, properties, and restrictions that can be used to represent and interchange provenance and metadata information relating to the creation, quality assessment, refinement and validation of mapping artefacts used to link and generate linked data datasets. It can also be specialized to create new classes and properties to model provenance and metadata information for domain specific mapping languages.",
+        "type" : "label"
+      } ],
+      "versionInfo" : [ {
+        "identifier" : "versionInfo",
+        "language" : "undefined",
+        "value" : "1 June 2020",
         "type" : "label"
       } ],
       "title" : [ {
@@ -194,7 +194,7 @@
       "en" : "MappingArtefact"
     },
     "comment" : {
-      "undefined" : "A mapping artefact contains rules which create or link linked data datasets."
+      "undefined" : "A mapping artefact contains rules which link or create linked data datasets."
     },
     "id" : "1",
     "superClasses" : [ "15" ]
@@ -501,7 +501,7 @@
     },
     "domain" : "3",
     "comment" : {
-      "undefined" : "The likelihood of refinement will resolve the violation."
+      "undefined" : "The likelihood a refinement will resolve the violation."
     },
     "attributes" : [ "datatype" ],
     "id" : "5"
@@ -710,12 +710,12 @@
     "attributes" : [ "anonymous", "object" ],
     "id" : "43"
   }, {
-    "range" : "8",
+    "range" : "17",
     "domain" : "16",
     "attributes" : [ "anonymous", "object" ],
     "id" : "44"
   }, {
-    "range" : "17",
+    "range" : "8",
     "domain" : "16",
     "attributes" : [ "anonymous", "object" ],
     "id" : "45"
@@ -809,7 +809,7 @@
     },
     "domain" : "1",
     "comment" : {
-      "undefined" : "A tool which has been used to create the mapping."
+      "undefined" : "A tool which has been used to create a mapping."
     },
     "attributes" : [ "datatype" ],
     "id" : "55"
