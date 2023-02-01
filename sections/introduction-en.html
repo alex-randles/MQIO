@@ -19,15 +19,15 @@ Fig. 1 shows the class interaction diagram of the ontology. The ontology describ
 </p>
 
 <p>
-<strong>Mapping quality assessment. </strong>In this stage, the mapping artefact (mqv:MappingArtefact) is assessed. The assessment activity is captured through the mqv:MappingAssessment class.
-The agent who initiated the process is also captured (prov:Agent). A mapping assessment activity may have quality requirements which are captured through the mqv:QualityRequirement
+<strong>Mapping quality assessment. </strong>In this stage, the mapping artefact (mqio:MappingArtefact) is assessed. The assessment activity is captured through the mqio:MappingAssessment class.
+The agent who initiated the process is also captured (prov:Agent). A mapping assessment activity may have quality requirements which are captured through the mqio:QualityRequirement
 class. This information allows the ontology to validate whether such quality requirements have been satisfied in the assessment and refinement stage. The ontology draws inspiration from
 DQV <a href="#bib-DQV">[DQV]</a> where data quality was classified into categories (dqv:Category), dimensions (dqv:Dimension) and metrics (dqv:Metric) <a href="#bib-ZaveriEtAl">[ZaveriEtAl]</a>. 
 The ontology uses the information in such classes
-to generate a mapping validation report (mqv:MappingValidationReport). Each violation identified is then represented with the mqv:MappingViolation class.
+to generate a mapping validation report (mqio:MappingValidationReport). Each violation identified is then represented with the mqio:MappingViolation class.
 </p>
 <p>
-<strong>Mapping quality refinement. </strong>This stage captures mapping refinements executed on the mapping. Each metric described using the ontology may have multiple refinements (mqv:MappingRefinement) associated with it depending on the quality aspect being measured. The refinement executed in the mapping is associated with the identified violation through the property mqv:wasRefinedBy. In addition, refinements have scores representing the likelihood the respective violation will be resolved.
+<strong>Mapping quality refinement. </strong>This stage captures mapping refinements executed on the mapping. Each metric described using the ontology may have multiple refinements (mqio:MappingRefinement) associated with it depending on the quality aspect being measured. The refinement executed in the mapping is associated with the identified violation through the property mqio:wasRefinedBy. In addition, refinements have scores representing the likelihood the respective violation will be resolved.
 </p>
 <p>
 <strong>Mapping quality validation. </strong>
