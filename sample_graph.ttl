@@ -53,7 +53,7 @@ ex:mappingQualityAssessment a mqio:MappingAssessment ;
     prov:wasAssociatedWith ex:user-1; 
     prov:endedAtTime  "2022-10-18T17:31:01.286820"^^xsd:dateTime;
     mqio:hasQualityRequirement ex:qualityRequirement; 
-    mqio:hasValidationReport ex:validationReport .
+    mqio:hasValidationReport ex:mappingValidationReport .
 
 ex:mappingValidationReport a mqio:MappingValidationReport ;
     prov:generatedAtTime  "2022-10-18T17:31:01.286820"^^xsd:dateTime;
