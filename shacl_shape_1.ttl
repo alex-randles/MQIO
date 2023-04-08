@@ -8,8 +8,7 @@ ex:validateQualityRequirements
     a sh:NodeShape ;
     sh:targetClass mqio:QualityRequirement ;
     sh:property [
-                    sh:path dqv:hasQualityMeasurement  ;
-                    sh:minCount 1;
-                    sh:message "No measurements associated with this quality requirement." ;
-
-                ] .
+		sh:path dqv:hasQualityMeasurement  ;
+		sh:minCount 1;
+		sh:message "No measurements associated with this quality requirement." ;
+    ] .

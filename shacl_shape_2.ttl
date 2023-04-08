@@ -4,12 +4,11 @@
 @prefix mqio: <https://w3id.org/MQIO#> .
 @prefix dqv: <http://www.w3.org/ns/dqv#>.
 
-ex:validateQualityRequirements
+ex:validateQualityViolations
     a sh:NodeShape ;
-    sh:targetClass mqio:QualityRequirement ;
+    sh:targetClass mqio:MappingViolation ;
     sh:property [
-                    sh:path dqv:hasQualityMeasurement  ;
-                    sh:minCount 1;
-                    sh:message "No measurements associated with this quality requirement." ;
-
-                ] .
+		sh:path mqio:wasRefinedBy  ;
+		sh:minCount 1;
+		sh:message "No refinements associated with this quality violation." ;
+    ] .
