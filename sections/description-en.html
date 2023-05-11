@@ -10,7 +10,8 @@
 <br>
 The SPARQL query shown below can be used to identify detected violations which have not be refined:
 <br>
-<pre><code>PREFIX mqio: &lt;https://w3id.org/MQIO#&gt;
+<pre>
+	<code>PREFIX mqio: &lt;https://www.w3id.org/MQIO#&gt;
 SELECT ?violation ?refinement
 WHERE {
   ?mappingAssessment a mqio:MappingAssessment ;
@@ -18,7 +19,8 @@ WHERE {
   ?validationReport mqio:hasViolation ?violation . 
   FILTER NOT EXISTS { ?violation mqio:wasRefinedBy ?refinement . } 
 }
-
+	</code>
+</pre>
 <div style="width:100%">
 <strong>Sample SHACL Shapes</strong>
 <table class="text-center w-100">
@@ -38,7 +40,8 @@ ex:validateQualityViolations
     sh:property [
 		sh:path mqio:wasRefinedBy  ;
 		sh:minCount 1;
-		sh:message "No refinements associated with this quality violation." ;
+		sh:message "No refinements associated 
+		            with this quality violation." ;
     ] .
 
     
@@ -46,7 +49,6 @@ ex:validateQualityViolations
     </pre>
 </td>
     <td>
-   
       <pre><code>
 @prefix sh: &lt;://www.w3.org/ns/shacl&lt; .
 @prefix xsd: &lt;://www.w3.org/2001/XMLSchema&lt; .
@@ -64,8 +66,8 @@ ex:validateQualityRequirements
                                 with this quality requirement." ;
 
                 ] .
-</code></pre>
-   
+</code>
+     </pre>
     </td>
   </tr>
 </table> 
