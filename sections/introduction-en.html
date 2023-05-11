@@ -34,6 +34,35 @@ to generate a mapping validation report (mqio:MappingValidationReport). Each vio
 Finally, the ontology provides quality information on the original mapping being assessed and the mapping which has been generated as a result of the refinement. As mentioned, each mapping assessment process may have quality requirements which can be validated at this stage. For instance, one may define a quality requirement for understandability related quality metrics to be of a particular value. In this stage, this can be validated by comparing the defined quality requirement and the resulting one. Requirements can be validated by identifying quality measurements (dqv:QualityMeasurement) associated with the quality assessment of the mapping. 
 </p>
 
+
+
+<p>
+It was decided to commence the process by identifying concepts and
+relationships from the Data Quality Vocabulary (DQV) <a href="#bib-DQV">[DQV]</a>, which could be reused to represent relevant
+information in the MQIO. DQV is a prominent ontology designed to represent quality information related to LD
+datasets. The ontology contains concepts and relationships to represent quality measurements, metrics,
+dimensions, categories and associated metadata. However, it was discovered that DQV reuses the PROV
+Ontology (PROV-O) <a href="#bib-PROV-O">[PROV-O]</a> in order to represent activities and entities associated with the quality metadata, such as
+the quality assessment process of a dataset, as DQV does not provide suitable concepts for representing related
+activities and entities. PROV-O is a W3C recommendation designed to represent LD provenance and contains
+concepts to represent generalized provenance related activities and entities captured in the LD domain.
+Therefore, it was decided to reuse PROV-O in a similar manner to the DQV. However, it was discovered that it
+would be required to extend the ontology in order to capture domain specific information required for the MQIO.
+For instance, the quality assessment and refinement of a mapping are two separate activities, which should be
+distinguished between in order to support sufficient interoperability. PROV-O includes a single concept to
+represent general activities (prov:Activity) and it would not be possible for a machine to automatically
+determine differences between information related to quality assessment and refinement activities, as these
+would be represented by the same concept. Similar constraints apply to the entities (prov:Entity) involved in
+the MQIO model, such as the mapping itself (mqio:MappingArtefact) and associated quality reports
+(mqio:MappingValidationReport), which must have a distinguishable different meaning. Therefore, it
+was decided to extend PROV-O in order to capture the domain specific concepts required in an ontology designed
+to represent information related to the quality improvement of mappings. An ontology fully reliant on concepts
+in the DQV and PROV-O would result in a semantic inoperable model, drastically limiting the ability to support
+quality assessment and refinement of mappings by agents.
+
+
+</p>
+
 <div id="namespacedeclarations">
 <h3 id="ns" class="list">Namespace declarations</h3>
 <div id="ns" align="center">

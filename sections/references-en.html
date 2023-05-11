@@ -51,7 +51,7 @@ A sample instance graph detailing a quality report expressed in the MQIO is pres
   <tr>
     <td>
     <pre><code>@prefix ex: &lt;http://example.org/&gt; .
-@prefix mqio: &lt;https://w3id.org/MQIO#gt; .
+@prefix mqio: &lt;https://w3id.org/MQIO#&gt; .
 @prefix mqio-metric: &lt;https://w3id.org/MQIO-metrics#&gt; .
 @prefix rdf: &lt;http://www.w3.org/1999/02/22-rdf-syntax-ns#&gt; .
 @prefix rdfs: &lt;http://www.w3.org/2000/01/rdf-schema#&gt; .
@@ -60,20 +60,60 @@ A sample instance graph detailing a quality report expressed in the MQIO is pres
 @prefix xsd: &lt;http://www.w3.org/2001/XMLSchema#&gt; .
 @prefix dqv: &lt;http://www.w3.org/ns/dqv#&gt;.
 @prefix prov: &lt;http://www.w3.org/ns/prov#&gt;.
+@prefix foaf: &lt;http://xmlns.com/foaf/0.1/&gt;.
+@prefix geo: &lt;http://www.opengis.net/ont/geosparql#&gt;.
 
-&lt;sample-mapping.ttl&gt; a mqio:MappingArtefact ;
+&lt;osi-mapping.ttl&gt; a mqio:MappingArtefact ;
     mqio:wasCreatedBy ex:user-1;
-    mqio:hasPurpose "Mapping to generate a Provenance Graph." ; 
+    mqio:hasPurpose "Research Project" ; 
     prov:generatedAtTime  "2022-01-18T17:31:01.286820"^^xsd:dateTime . 
 
 ex:mappingQualityAssessment a mqio:MappingAssessment ;
-    mqio:assessedMapping &lt;sample-mapping.ttl&gt; ;
-    mqio:wasExecuted mqio-metric:D2, mqio-metric:D3, mqio-metric:D4 ;
+    mqio:assessedMapping &lt;osi-mapping.ttl&gt; ;
+    mqio:wasExecuted mqio-metric:D2 ;
     mqio:usedTool ex:mappingEditor ;
     prov:wasAssociatedWith ex:user-1; 
     prov:endedAtTime  "2022-10-18T17:31:01.286820"^^xsd:dateTime;
     mqio:hasQualityRequirement ex:qualityRequirement; 
-    mqio:hasValidationReport ex:mappingValidationReport .</code></pre>
+    mqio:hasValidationReport ex:mappingValidationReport .
+
+ex:mappingValidationReport a mqio:MappingValidationReport ;
+    prov:generatedAtTime  "2022-10-18T17:31:01.286820"^^xsd:dateTime;
+    mqio:hasViolation ex:violation-0 . 
+    
+ex:violation-0 a mqio:MappingViolation ;
+    mqio:hasLocation "predicateObjectMap-1" ;
+    mqio:hasObjectValue geo:asWTK ;
+    mqio:inTripleMap &lt;#TripleMap1&gt; ;
+    mqio:isDescribedBy mqio:metric-D2 ;
+    mqio:hasResultMessage "Usage of undefined property." .
+
+ex:refinement-0 a mqio:MappingRefinement ;
+    mqio:usedQuery """
+         PREFIX rr: &lt;http://www.w3.org/ns/r2rml#&gt;
+         DELETE { ?predicateObjectMap rr:predicate ?property }
+         INSERT { ?predicateObjectMap rr:predicate &lt;http://www.opengis.net/ont/geosparql#asWKT&gt; }
+         WHERE  {
+                SELECT ?predicateObjectMap ?property
+                WHERE {
+                      ?predicateObjectMap rr:predicate ?property.
+                      FILTER(str(?predicateObjectMap) = &lt;BLANK_ID&gt;).
+                 }
+                }
+               """ ;
+    mqio:hasConfidence "0.75"^^xsd:double; 
+    prov:endedAtTime  "2022-10-18T17:31:01.286820"^^xsd:dateTime;
+    prov:wasAssociatedWith ex:user-1; 
+    mqio:hasRefinementName "Find Similar Predicates"; 
+    mqio:refinedViolation ex:violation-0 .
+    
+ex:qualityRequirement a mqio:QualityRequirement;
+    rdfs:comment "Quality requirement associated with the mapping."; 
+    mqio:isSatisifed  "true"^^xsd:boolean ;
+    dqv:hasQualityMeasurement ex:qualityMeasurement-1, ex:qualityMeasurement-2 .
+    
+    
+    </code></pre>
 </td>
    
   </tr>
