@@ -1,5 +1,13 @@
 <h2 id="intro" class="list">Introduction <span class="backlink"> back to <a href="#toc">ToC</a></span></h2>
 
+
+
+<style>
+.courier-font { 
+	font-family:courier, courier new, serif;
+}
+</style>
+
 <center> 
 <figure>
   <img src="./images/model.png" alt="Model diagram">
@@ -54,7 +62,7 @@ represent general activities (prov:Activity) and it would not be possible for a 
 determine differences between information related to quality assessment and refinement activities, as these
 would be represented by the same concept. Similar constraints apply to the entities (prov:Entity) involved in
 the MQIO model, such as the mapping itself (mqio:MappingArtefact) and associated quality reports
-(mqio:MappingValidationReport), which must have a distinguishable different meaning. Therefore, it
+(<span class="courier-font">mqio:MappingValidationReport</span>), which must have a distinguishable different meaning. Therefore, it
 was decided to extend PROV-O in order to capture the domain specific concepts required in an ontology designed
 to represent information related to the quality improvement of mappings. An ontology fully reliant on concepts
 in the DQV and PROV-O would result in a semantic inoperable model, drastically limiting the ability to support
