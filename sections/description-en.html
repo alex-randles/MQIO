@@ -8,7 +8,7 @@
   <li>The graph has been assessed using RDFUnit (<a target="_blank" href="https://alex-randles.github.io/MQV/validation.html">Result</a>).</li>
 </ul>  
 <br>
-The SPARQL query shown below can be used to identify detected violations which have not be refined:
+The <strong>SPARQL query</strong> shown below can be used to identify detected violations which have not be refined:
 <br>
 <pre>
 	<code>PREFIX mqio: &lt;https://www.w3id.org/MQIO#&gt;
@@ -28,11 +28,30 @@ WHERE {
     <td>
     <pre>
 		<code>
-@prefix sh: &lt;://www.w3.org/ns/shacl&lt; .
-@prefix xsd: &lt;://www.w3.org/2001/XMLSchema&lt; .
-@prefix ex: &lt;://example.org/&lt; .
-@prefix mqio: &lt;s://w3id.org/MQIO&lt; .
-@prefix dqv: &lt;://www.w3.org/ns/dqv&lt; .
+@prefix sh: &lt;http://www.w3.org/ns/shacl#&gt; .
+@prefix xsd: &lt;http://www.w3.org/2001/XMLSchema#&gt; .
+@prefix ex: &lt;http://example.org/&gt; .
+@prefix mqio: &lt;https://w3id.org/MQIO#&gt; .
+@prefix dqv: &lt;http://www.w3.org/ns/dqv#&gt;.
+
+ex:validateQualityRequirements
+    a sh:NodeShape ;
+    sh:targetClass mqio:QualityRequirement ;
+    sh:property [
+		sh:path dqv:hasQualityMeasurement  ;
+		sh:minCount 1;
+		sh:message "No measurements associated with this quality requirement." ;
+    ] .
+    </code>
+    </pre>
+</td>
+    <td>
+      <pre><code>
+@prefix sh: &lt;http://www.w3.org/ns/shacl#&gt; .
+@prefix xsd: &lt;http://www.w3.org/2001/XMLSchema#&gt; .
+@prefix ex: &lt;http://example.org/&gt; .
+@prefix mqio: &lt;https://w3id.org/MQIO#&gt; .
+@prefix dqv: &lt;http://www.w3.org/ns/dqv#&gt;.
 
 ex:validateQualityViolations
     a sh:NodeShape ;
@@ -40,32 +59,8 @@ ex:validateQualityViolations
     sh:property [
 		sh:path mqio:wasRefinedBy  ;
 		sh:minCount 1;
-		sh:message "No refinements associated 
-		            with this quality violation." ;
+		sh:message "No refinements associated with this quality violation." ;
     ] .
-
-    
-    </code>
-    </pre>
-</td>
-    <td>
-      <pre><code>
-@prefix sh: &lt;://www.w3.org/ns/shacl&lt; .
-@prefix xsd: &lt;://www.w3.org/2001/XMLSchema&lt; .
-@prefix ex: &lt;://example.org/&lt; .
-@prefix mqio: &lt;s://w3id.org/MQIO&lt; .
-@prefix dqv: &lt;://www.w3.org/ns/dqv&lt; .
-
-ex:validateQualityRequirements
-    a sh:NodeShape ;
-    sh:targetClass mqio:QualityRequirement ;
-    sh:property [
-                    sh:path dqv:hasQualityMeasurement  ;
-                    sh:minCount 1;
-                    sh:message "No measurements associated
-                                with this quality requirement." ;
-
-                ] .
 </code>
      </pre>
     </td>
