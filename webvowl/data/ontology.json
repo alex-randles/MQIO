@@ -2,21 +2,26 @@
   "_comment" : "Created with OWL2VOWL (version 0.3.5), http://vowl.visualdataweb.org",
   "header" : {
     "languages" : [ "en", "undefined" ],
-    "baseIris" : [ "http://www.w3.org/1999/02/22-rdf-syntax-ns", "http://www.w3.org/2000/01/rdf-schema", "http://www.w3.org/ns/prov", "https://www.w3.org/MQIO/", "http://www.w3.org/ns/dqv", "http://www.w3.org/2001/XMLSchema" ],
+    "baseIris" : [ "http://www.w3.org/1999/02/22-rdf-syntax-ns", "http://www.w3.org/2000/01/rdf-schema", "http://www.w3.org/ns/prov", "http://www.w3.org/ns/dqv", "http://www.w3.org/2001/XMLSchema", "https://www.w3id.org/MQIO" ],
     "title" : {
       "undefined" : "Mapping Quality Improvement Ontology (MQIO)"
     },
-    "iri" : "https://www.w3.org/MQIO/#",
-    "version" : "1 June 2020",
+    "iri" : "https://www.w3id.org/MQIO#",
+    "version" : "v1.3",
     "author" : [ "Alex Randles", "Declan O'Sullivan", "Ademar Crotti Junior" ],
     "other" : {
       "license" : [ {
         "identifier" : "license",
         "language" : "undefined",
         "value" : "http://creativecommons.org/publicdomain/zero/1.0/",
-        "type" : "label"
+        "type" : "iri"
       } ],
       "creator" : [ {
+        "identifier" : "creator",
+        "language" : "undefined",
+        "value" : "Alex Randles",
+        "type" : "label"
+      }, {
         "identifier" : "creator",
         "language" : "undefined",
         "value" : "Declan O'Sullivan",
@@ -26,40 +31,35 @@
         "language" : "undefined",
         "value" : "Ademar Crotti Junior",
         "type" : "label"
-      }, {
-        "identifier" : "creator",
-        "language" : "undefined",
-        "value" : "Alex Randles",
-        "type" : "label"
       } ],
       "created" : [ {
         "identifier" : "created",
         "language" : "undefined",
-        "value" : "1 June 2020",
+        "value" : "01 May 2023",
         "type" : "label"
       } ],
       "preferredNamespacePrefix" : [ {
         "identifier" : "preferredNamespacePrefix",
         "language" : "undefined",
-        "value" : "mqio",
-        "type" : "label"
-      } ],
-      "preferredNamespaceUri" : [ {
-        "identifier" : "preferredNamespaceUri",
-        "language" : "undefined",
-        "value" : "https://www.w3.org/MQIO/#",
-        "type" : "label"
-      } ],
-      "abstract" : [ {
-        "identifier" : "abstract",
-        "language" : "undefined",
-        "value" : "The Mapping Quality Improvement Ontology (MQIO) provides a set of classes, properties, and restrictions that can be used to represent and interchange provenance and metadata information relating to the creation, quality assessment, refinement and validation of mapping artefacts used to link and generate linked data datasets. It can also be specialized to create new classes and properties to model provenance and metadata information for domain specific mapping languages.",
+        "value" : "mqio:",
         "type" : "label"
       } ],
       "versionInfo" : [ {
         "identifier" : "versionInfo",
         "language" : "undefined",
-        "value" : "1 June 2020",
+        "value" : "v1.3",
+        "type" : "label"
+      } ],
+      "preferredNamespaceUri" : [ {
+        "identifier" : "preferredNamespaceUri",
+        "language" : "undefined",
+        "value" : "https://www.w3id.org/MQIO/#",
+        "type" : "label"
+      } ],
+      "abstract" : [ {
+        "identifier" : "abstract",
+        "language" : "undefined",
+        "value" : "The Mapping Quality Improvement Ontology (MQIO) provides a set of classes, properties, and restrictions that can be used to represent and interchange provenance and metadata information relating to the creation, quality assessment, refinement and validation of mapping artefacts used to link and generate linked data datasets. It can also be specialized to create new classes and properties to model provenance and metadata information for domain specific mapping languages.nges that have occured within the source data of an RDF dataset. The ontology allows a notification policy to be defined which will notify users when a defined threshold of changes has been reached. Once notified the mapping and source data should be re-examined to ensure no further action is required to prevent a decrease in quality. This ontology is licensed under the Attribution (CC BY) License.",
         "type" : "label"
       } ],
       "title" : [ {
@@ -72,79 +72,67 @@
   },
   "namespace" : [ ],
   "class" : [ {
-    "id" : "2",
-    "type" : "owl:Class"
-  }, {
-    "id" : "10",
-    "type" : "owl:Class"
-  }, {
-    "id" : "11",
-    "type" : "owl:Class"
-  }, {
-    "id" : "15",
-    "type" : "owl:Class"
-  }, {
-    "id" : "1",
-    "type" : "owl:Class"
-  }, {
-    "id" : "24",
-    "type" : "owl:Class"
-  }, {
-    "id" : "8",
-    "type" : "owl:Class"
-  }, {
-    "id" : "33",
-    "type" : "rdfs:Datatype"
-  }, {
-    "id" : "34",
-    "type" : "rdfs:Datatype"
-  }, {
-    "id" : "37",
-    "type" : "owl:Class"
-  }, {
-    "id" : "38",
-    "type" : "rdfs:Datatype"
-  }, {
-    "id" : "39",
-    "type" : "rdfs:Datatype"
-  }, {
-    "id" : "41",
-    "type" : "rdfs:Datatype"
-  }, {
-    "id" : "3",
+    "id" : "0",
     "type" : "owl:Class"
   }, {
     "id" : "4",
     "type" : "owl:Class"
   }, {
-    "id" : "46",
-    "type" : "owl:unionOf"
-  }, {
-    "id" : "6",
-    "type" : "rdfs:Datatype"
-  }, {
-    "id" : "9",
-    "type" : "rdfs:Datatype"
-  }, {
-    "id" : "31",
-    "type" : "rdfs:Datatype"
-  }, {
-    "id" : "27",
-    "type" : "rdfs:Datatype"
-  }, {
-    "id" : "16",
+    "id" : "8",
     "type" : "owl:Class"
   }, {
-    "id" : "49",
+    "id" : "10",
     "type" : "owl:Class"
   }, {
-    "id" : "53",
+    "id" : "1",
     "type" : "owl:Class"
   }, {
-    "id" : "17",
+    "id" : "23",
+    "type" : "rdfs:Datatype"
+  }, {
+    "id" : "12",
+    "type" : "owl:Class"
+  }, {
+    "id" : "34",
     "type" : "owl:Class"
   }, {
     "id" : "14",
+    "type" : "rdfs:Datatype"
+  }, {
+    "id" : "2",
+    "type" : "owl:Class"
+  }, {
+    "id" : "35",
+    "type" : "rdfs:Datatype"
+  }, {
+    "id" : "36",
+    "type" : "rdfs:Datatype"
+  }, {
+    "id" : "7",
+    "type" : "owl:unionOf"
+  }, {
+    "id" : "42",
+    "type" : "rdfs:Datatype"
+  }, {
+    "id" : "17",
+    "type" : "rdfs:Datatype"
+  }, {
+    "id" : "43",
+    "type" : "rdfs:Datatype"
+  }, {
+    "id" : "25",
+    "type" : "rdfs:Datatype"
+  }, {
+    "id" : "9",
+    "type" : "owl:Class"
+  }, {
+    "id" : "6",
+    "type" : "owl:Class"
+  }, {
+    "id" : "11",
+    "type" : "owl:Class"
+  }, {
+    "id" : "20",
     "type" : "owl:Class"
   } ],
   "classAttribute" : [ {
@@ -154,9 +142,9 @@
     "label" : {
       "IRI-based" : "Activity"
     },
-    "subClasses" : [ "3", "4" ],
+    "subClasses" : [ "1", "2" ],
     "attributes" : [ "external" ],
-    "id" : "2"
+    "id" : "0"
   }, {
     "iri" : "http://www.w3.org/ns/dqv#Metric",
     "baseIri" : "http://www.w3.org/ns/dqv",
@@ -165,16 +153,7 @@
       "IRI-based" : "Metric"
     },
     "attributes" : [ "external" ],
-    "id" : "10"
-  }, {
-    "iri" : "http://www.w3.org/ns/dqv#Category",
-    "baseIri" : "http://www.w3.org/ns/dqv",
-    "instances" : 0,
-    "label" : {
-      "IRI-based" : "Category"
-    },
-    "attributes" : [ "external" ],
-    "id" : "11"
+    "id" : "4"
   }, {
     "iri" : "http://www.w3.org/ns/prov#Entity",
     "baseIri" : "http://www.w3.org/ns/prov",
@@ -182,34 +161,12 @@
     "label" : {
       "IRI-based" : "Entity"
     },
-    "subClasses" : [ "16", "8", "17", "1" ],
+    "subClasses" : [ "9", "6", "10", "11", "12" ],
     "attributes" : [ "external" ],
-    "id" : "15"
+    "id" : "8"
   }, {
-    "iri" : "https://www.w3.org/MQIO/#MappingArtefact",
-    "baseIri" : "https://www.w3.org/MQIO/",
-    "instances" : 0,
-    "label" : {
-      "IRI-based" : "MappingArtefact",
-      "en" : "MappingArtefact"
-    },
-    "comment" : {
-      "undefined" : "A mapping artefact contains rules which link or create linked data datasets."
-    },
-    "id" : "1",
-    "superClasses" : [ "15" ]
-  }, {
-    "iri" : "http://www.w3.org/ns/dqv#Dimension",
-    "baseIri" : "http://www.w3.org/ns/dqv",
-    "instances" : 0,
-    "label" : {
-      "IRI-based" : "Dimension"
-    },
-    "attributes" : [ "external" ],
-    "id" : "24"
-  }, {
-    "iri" : "https://www.w3.org/MQIO/#MappingViolation",
-    "baseIri" : "https://www.w3.org/MQIO/",
+    "iri" : "https://www.w3id.org/MQIO#MappingViolation",
+    "baseIri" : "https://www.w3id.org/MQIO",
     "instances" : 0,
     "label" : {
       "IRI-based" : "MappingViolation",
@@ -218,55 +175,11 @@
     "comment" : {
       "undefined" : "A mapping violation is a quality issue present within a mapping."
     },
-    "id" : "8",
-    "superClasses" : [ "15" ]
+    "id" : "10",
+    "superClasses" : [ "8" ]
   }, {
-    "iri" : "http://www.w3.org/2001/XMLSchema#string",
-    "baseIri" : "http://www.w3.org/2001/XMLSchema",
-    "id" : "33",
-    "label" : {
-      "IRI-based" : "string"
-    }
-  }, {
-    "iri" : "http://www.w3.org/2001/XMLSchema#string",
-    "baseIri" : "http://www.w3.org/2001/XMLSchema",
-    "id" : "34",
-    "label" : {
-      "IRI-based" : "string"
-    }
-  }, {
-    "iri" : "http://www.w3.org/ns/prov#Agent",
-    "baseIri" : "http://www.w3.org/ns/prov",
-    "instances" : 0,
-    "label" : {
-      "IRI-based" : "Agent"
-    },
-    "attributes" : [ "external" ],
-    "id" : "37"
-  }, {
-    "iri" : "http://www.w3.org/2001/XMLSchema#string",
-    "baseIri" : "http://www.w3.org/2001/XMLSchema",
-    "id" : "38",
-    "label" : {
-      "IRI-based" : "string"
-    }
-  }, {
-    "iri" : "http://www.w3.org/2001/XMLSchema#boolean",
-    "baseIri" : "http://www.w3.org/2001/XMLSchema",
-    "id" : "39",
-    "label" : {
-      "IRI-based" : "boolean"
-    }
-  }, {
-    "iri" : "http://www.w3.org/2001/XMLSchema#string",
-    "baseIri" : "http://www.w3.org/2001/XMLSchema",
-    "id" : "41",
-    "label" : {
-      "IRI-based" : "string"
-    }
-  }, {
-    "iri" : "https://www.w3.org/MQIO/#MappingRefinement",
-    "baseIri" : "https://www.w3.org/MQIO/",
+    "iri" : "https://www.w3id.org/MQIO#MappingRefinement",
+    "baseIri" : "https://www.w3id.org/MQIO",
     "instances" : 0,
     "label" : {
       "IRI-based" : "MappingRefinement",
@@ -275,57 +188,18 @@
     "comment" : {
       "undefined" : "An activity which involves removing quality violations detected in a mapping artefact."
     },
-    "id" : "3",
-    "superClasses" : [ "2" ]
-  }, {
-    "iri" : "https://www.w3.org/MQIO/#MappingAssessment",
-    "baseIri" : "https://www.w3.org/MQIO/",
-    "instances" : 0,
-    "label" : {
-      "IRI-based" : "MappingAssessment",
-      "en" : "MappingAssessment"
-    },
-    "comment" : {
-      "undefined" : "An activity in which the quality of a mapping artefact is assessed, generating information on quality issues within the mapping."
-    },
-    "id" : "4",
-    "superClasses" : [ "2" ]
-  }, {
-    "instances" : 0,
-    "union" : [ "3", "37" ],
-    "attributes" : [ "anonymous", "union" ],
-    "id" : "46"
-  }, {
-    "iri" : "http://www.w3.org/2001/XMLSchema#double",
-    "baseIri" : "http://www.w3.org/2001/XMLSchema",
-    "id" : "6",
-    "label" : {
-      "IRI-based" : "double"
-    }
+    "id" : "1",
+    "superClasses" : [ "0" ]
   }, {
     "iri" : "http://www.w3.org/2001/XMLSchema#string",
     "baseIri" : "http://www.w3.org/2001/XMLSchema",
-    "id" : "9",
+    "id" : "23",
     "label" : {
       "IRI-based" : "string"
     }
   }, {
-    "iri" : "http://www.w3.org/2001/XMLSchema#string",
-    "baseIri" : "http://www.w3.org/2001/XMLSchema",
-    "id" : "31",
-    "label" : {
-      "IRI-based" : "string"
-    }
-  }, {
-    "iri" : "http://www.w3.org/2001/XMLSchema#string",
-    "baseIri" : "http://www.w3.org/2001/XMLSchema",
-    "id" : "27",
-    "label" : {
-      "IRI-based" : "string"
-    }
-  }, {
-    "iri" : "https://www.w3.org/MQIO/#MappingValidationReport",
-    "baseIri" : "https://www.w3.org/MQIO/",
+    "iri" : "https://www.w3id.org/MQIO#MappingValidationReport",
+    "baseIri" : "https://www.w3id.org/MQIO",
     "instances" : 0,
     "label" : {
       "IRI-based" : "MappingValidationReport",
@@ -334,29 +208,87 @@
     "comment" : {
       "undefined" : "A mapping validation report contains information related to quality violations contained within a mapping artefact."
     },
-    "id" : "16",
-    "superClasses" : [ "15" ]
+    "id" : "12",
+    "superClasses" : [ "8" ]
   }, {
-    "iri" : "http://www.w3.org/ns/prov#Collection",
+    "iri" : "http://www.w3.org/ns/prov#Agent",
     "baseIri" : "http://www.w3.org/ns/prov",
     "instances" : 0,
     "label" : {
-      "IRI-based" : "Collection"
+      "IRI-based" : "Agent"
     },
     "attributes" : [ "external" ],
-    "id" : "49"
+    "id" : "34"
   }, {
-    "iri" : "http://www.w3.org/ns/dqv#QualityMeasurement",
-    "baseIri" : "http://www.w3.org/ns/dqv",
+    "iri" : "http://www.w3.org/2001/XMLSchema#string",
+    "baseIri" : "http://www.w3.org/2001/XMLSchema",
+    "id" : "14",
+    "label" : {
+      "IRI-based" : "string"
+    }
+  }, {
+    "iri" : "https://www.w3id.org/MQIO#MappingAssessment",
+    "baseIri" : "https://www.w3id.org/MQIO",
     "instances" : 0,
     "label" : {
-      "IRI-based" : "QualityMeasurement"
+      "IRI-based" : "MappingAssessment",
+      "en" : "MappingAssessment"
     },
-    "attributes" : [ "external" ],
-    "id" : "53"
+    "comment" : {
+      "undefined" : "An activity in which the quality of a mapping artefact is assessed, generating information on quality issues within the mapping."
+    },
+    "id" : "2",
+    "superClasses" : [ "0" ]
   }, {
-    "iri" : "https://www.w3.org/MQIO/#QualityRequirement",
-    "baseIri" : "https://www.w3.org/MQIO/",
+    "iri" : "http://www.w3.org/2001/XMLSchema#boolean",
+    "baseIri" : "http://www.w3.org/2001/XMLSchema",
+    "id" : "35",
+    "label" : {
+      "IRI-based" : "boolean"
+    }
+  }, {
+    "iri" : "http://www.w3.org/2001/XMLSchema#string",
+    "baseIri" : "http://www.w3.org/2001/XMLSchema",
+    "id" : "36",
+    "label" : {
+      "IRI-based" : "string"
+    }
+  }, {
+    "instances" : 0,
+    "union" : [ "1", "34" ],
+    "attributes" : [ "union", "anonymous" ],
+    "id" : "7"
+  }, {
+    "iri" : "http://www.w3.org/2001/XMLSchema#double",
+    "baseIri" : "http://www.w3.org/2001/XMLSchema",
+    "id" : "42",
+    "label" : {
+      "IRI-based" : "double"
+    }
+  }, {
+    "iri" : "http://www.w3.org/2001/XMLSchema#string",
+    "baseIri" : "http://www.w3.org/2001/XMLSchema",
+    "id" : "17",
+    "label" : {
+      "IRI-based" : "string"
+    }
+  }, {
+    "iri" : "http://www.w3.org/2001/XMLSchema#string",
+    "baseIri" : "http://www.w3.org/2001/XMLSchema",
+    "id" : "43",
+    "label" : {
+      "IRI-based" : "string"
+    }
+  }, {
+    "iri" : "http://www.w3.org/2001/XMLSchema#string",
+    "baseIri" : "http://www.w3.org/2001/XMLSchema",
+    "id" : "25",
+    "label" : {
+      "IRI-based" : "string"
+    }
+  }, {
+    "iri" : "https://www.w3id.org/MQIO#QualityRequirement",
+    "baseIri" : "https://www.w3id.org/MQIO",
     "instances" : 0,
     "label" : {
       "IRI-based" : "QualityRequirement",
@@ -365,8 +297,34 @@
     "comment" : {
       "undefined" : "A quality requirement is a requirement a mapping should satisfy."
     },
-    "id" : "17",
-    "superClasses" : [ "15" ]
+    "id" : "9",
+    "superClasses" : [ "8" ]
+  }, {
+    "iri" : "https://www.w3id.org/MQIO#MappingArtefact",
+    "baseIri" : "https://www.w3id.org/MQIO",
+    "instances" : 0,
+    "label" : {
+      "IRI-based" : "MappingArtefact",
+      "en" : "MappingArtefact"
+    },
+    "comment" : {
+      "undefined" : "A mapping artefact contains rules which link or create linked data datasets."
+    },
+    "id" : "6",
+    "superClasses" : [ "8" ]
+  }, {
+    "iri" : "https://www.w3id.org/MQIO#MappingTool",
+    "baseIri" : "https://www.w3id.org/MQIO",
+    "instances" : 0,
+    "label" : {
+      "IRI-based" : "MappingTool",
+      "en" : "MappingTool"
+    },
+    "comment" : {
+      "undefined" : "A mapping tool is any tool used during the creation of a mapping."
+    },
+    "id" : "11",
+    "superClasses" : [ "8" ]
   }, {
     "iri" : "http://www.w3.org/2000/01/rdf-schema#Resource",
     "baseIri" : "http://www.w3.org/2000/01/rdf-schema",
@@ -375,44 +333,44 @@
       "IRI-based" : "Resource"
     },
     "attributes" : [ "external" ],
-    "id" : "14"
+    "id" : "20"
   } ],
   "property" : [ {
-    "id" : "0",
+    "id" : "3",
     "type" : "owl:objectProperty"
   }, {
     "id" : "5",
-    "type" : "owl:datatypeProperty"
-  }, {
-    "id" : "7",
-    "type" : "owl:datatypeProperty"
-  }, {
-    "id" : "12",
     "type" : "owl:objectProperty"
   }, {
     "id" : "13",
+    "type" : "owl:datatypeProperty"
+  }, {
+    "id" : "15",
     "type" : "owl:objectProperty"
+  }, {
+    "id" : "16",
+    "type" : "owl:datatypeProperty"
   }, {
     "id" : "18",
-    "type" : "owl:objectProperty"
+    "type" : "rdfs:SubClassOf"
   }, {
-    "id" : "20",
+    "id" : "19",
     "type" : "owl:objectProperty"
   }, {
     "id" : "21",
-    "type" : "rdfs:SubClassOf"
+    "type" : "owl:objectProperty"
   }, {
     "id" : "22",
-    "type" : "owl:objectProperty"
+    "type" : "owl:datatypeProperty"
   }, {
-    "id" : "23",
-    "type" : "owl:objectProperty"
-  }, {
-    "id" : "25",
-    "type" : "owl:objectProperty"
+    "id" : "24",
+    "type" : "owl:datatypeProperty"
   }, {
     "id" : "26",
-    "type" : "owl:datatypeProperty"
+    "type" : "owl:objectProperty"
+  }, {
+    "id" : "27",
+    "type" : "rdfs:SubClassOf"
   }, {
     "id" : "28",
     "type" : "rdfs:SubClassOf"
@@ -421,43 +379,52 @@
     "type" : "rdfs:SubClassOf"
   }, {
     "id" : "30",
-    "type" : "owl:datatypeProperty"
+    "type" : "rdfs:SubClassOf"
+  }, {
+    "id" : "31",
+    "type" : "rdfs:SubClassOf"
   }, {
     "id" : "32",
     "type" : "rdfs:SubClassOf"
   }, {
-    "id" : "35",
-    "type" : "rdfs:SubClassOf"
+    "id" : "33",
+    "type" : "owl:objectProperty"
   }, {
-    "id" : "36",
-    "type" : "rdfs:SubClassOf"
+    "id" : "37",
+    "type" : "owl:datatypeProperty"
+  }, {
+    "id" : "38",
+    "type" : "owl:disjointWith"
+  }, {
+    "id" : "39",
+    "type" : "owl:disjointWith"
   }, {
     "id" : "40",
-    "type" : "owl:datatypeProperty"
-  }, {
-    "id" : "42",
-    "type" : "owl:datatypeProperty"
-  }, {
-    "id" : "43",
     "type" : "owl:disjointWith"
+  }, {
+    "id" : "41",
+    "type" : "owl:objectProperty"
   }, {
     "id" : "44",
-    "type" : "owl:disjointWith"
+    "type" : "owl:objectProperty"
   }, {
     "id" : "45",
-    "type" : "owl:disjointWith"
+    "type" : "owl:objectProperty"
+  }, {
+    "id" : "46",
+    "type" : "owl:datatypeProperty"
   }, {
     "id" : "47",
-    "type" : "owl:disjointWith"
-  }, {
-    "id" : "19",
     "type" : "owl:objectProperty"
   }, {
     "id" : "48",
+    "type" : "owl:datatypeProperty"
+  }, {
+    "id" : "49",
     "type" : "owl:disjointWith"
   }, {
     "id" : "50",
-    "type" : "owl:objectProperty"
+    "type" : "owl:disjointWith"
   }, {
     "id" : "51",
     "type" : "owl:datatypeProperty"
@@ -465,381 +432,380 @@
     "id" : "52",
     "type" : "owl:objectProperty"
   }, {
-    "id" : "54",
+    "id" : "53",
     "type" : "owl:objectProperty"
   }, {
-    "id" : "55",
-    "type" : "owl:datatypeProperty"
-  }, {
-    "id" : "56",
-    "type" : "owl:datatypeProperty"
-  }, {
-    "id" : "57",
+    "id" : "54",
     "type" : "owl:objectProperty"
   } ],
   "propertyAttribute" : [ {
-    "iri" : "https://www.w3.org/MQIO/#hasMappingSource",
-    "baseIri" : "https://www.w3.org/MQIO/",
-    "range" : "1",
-    "label" : {
-      "IRI-based" : "hasMappingSource",
-      "en" : "hasMappingSource"
-    },
-    "domain" : "1",
-    "comment" : {
-      "undefined" : "The original mapping artefact from which the refined mapping was derived."
-    },
-    "attributes" : [ "object", "transitive" ],
-    "id" : "0"
-  }, {
-    "iri" : "https://www.w3.org/MQIO/#hasConfidence",
-    "baseIri" : "https://www.w3.org/MQIO/",
-    "range" : "6",
-    "label" : {
-      "IRI-based" : "hasConfidence",
-      "en" : "hasConfidence"
-    },
-    "domain" : "3",
-    "comment" : {
-      "undefined" : "The likelihood a refinement will resolve the violation."
-    },
-    "attributes" : [ "datatype" ],
-    "id" : "5"
-  }, {
-    "iri" : "https://www.w3.org/MQIO/#hasLiteralValue",
-    "baseIri" : "https://www.w3.org/MQIO/",
-    "range" : "9",
-    "label" : {
-      "IRI-based" : "hasLiteralValue",
-      "en" : "hasLiteralValue"
-    },
-    "domain" : "8",
-    "comment" : {
-      "undefined" : "The literal value associated with the violation."
-    },
-    "attributes" : [ "datatype" ],
-    "id" : "7"
-  }, {
-    "iri" : "https://www.w3.org/MQIO/#isDescribedBy",
-    "baseIri" : "https://www.w3.org/MQIO/",
-    "range" : "10",
-    "label" : {
-      "IRI-based" : "isDescribedBy",
-      "en" : "isDescribedBy"
-    },
-    "domain" : "8",
-    "comment" : {
-      "undefined" : "The quality metric which detected the violation."
-    },
-    "attributes" : [ "object" ],
-    "id" : "12"
-  }, {
-    "iri" : "https://www.w3.org/MQIO/#hasObjectValue",
-    "baseIri" : "https://www.w3.org/MQIO/",
-    "range" : "14",
-    "label" : {
-      "IRI-based" : "hasObjectValue",
-      "en" : "hasObjectValue"
-    },
-    "domain" : "8",
-    "comment" : {
-      "undefined" : "The object value associated with the violation."
-    },
-    "attributes" : [ "object" ],
-    "id" : "13"
-  }, {
-    "iri" : "https://www.w3.org/MQIO/#wasRefinedBy",
-    "inverse" : "19",
-    "baseIri" : "https://www.w3.org/MQIO/",
-    "range" : "3",
-    "label" : {
-      "IRI-based" : "wasRefinedBy",
-      "en" : "wasRefinedBy"
-    },
-    "domain" : "8",
-    "comment" : {
-      "undefined" : "The refinement used to refine a quality violation."
-    },
-    "attributes" : [ "object" ],
-    "id" : "18"
-  }, {
-    "iri" : "https://www.w3.org/MQIO/#inTripleMap",
-    "baseIri" : "https://www.w3.org/MQIO/",
-    "range" : "14",
-    "label" : {
-      "IRI-based" : "inTripleMap",
-      "en" : "inTripleMap"
-    },
-    "domain" : "8",
-    "comment" : {
-      "undefined" : "The triple map where the violation occurred."
-    },
-    "attributes" : [ "object" ],
-    "id" : "20"
-  }, {
-    "range" : "15",
-    "domain" : "1",
-    "attributes" : [ "anonymous", "object" ],
-    "id" : "21"
-  }, {
-    "iri" : "https://www.w3.org/MQIO/#wasExecuted",
-    "baseIri" : "https://www.w3.org/MQIO/",
-    "range" : "10",
+    "iri" : "https://www.w3id.org/MQIO#wasExecuted",
+    "baseIri" : "https://www.w3id.org/MQIO",
+    "range" : "4",
     "label" : {
       "IRI-based" : "wasExecuted",
       "en" : "wasExecuted"
     },
-    "domain" : "4",
+    "domain" : "2",
     "comment" : {
       "undefined" : "A quality metric executed by the mapping quality assessment process."
     },
     "attributes" : [ "object" ],
-    "id" : "22"
+    "id" : "3"
   }, {
-    "iri" : "https://www.w3.org/MQIO/#hasViolation",
-    "baseIri" : "https://www.w3.org/MQIO/",
-    "range" : "8",
-    "label" : {
-      "IRI-based" : "hasViolation",
-      "en" : "hasViolation"
-    },
-    "domain" : "16",
-    "comment" : {
-      "undefined" : "A mapping quality violation contained within a mapping validation report."
-    },
-    "attributes" : [ "object" ],
-    "id" : "23"
-  }, {
-    "iri" : "https://www.w3.org/MQIO/#hasValidationReport",
-    "baseIri" : "https://www.w3.org/MQIO/",
-    "range" : "16",
-    "label" : {
-      "IRI-based" : "hasValidationReport",
-      "en" : "hasValidationReport"
-    },
-    "domain" : "4",
-    "comment" : {
-      "undefined" : "The mapping quality validation report generated by the quality assessment process."
-    },
-    "attributes" : [ "object" ],
-    "id" : "25"
-  }, {
-    "iri" : "https://www.w3.org/MQIO/#hasPurpose",
-    "baseIri" : "https://www.w3.org/MQIO/",
-    "range" : "27",
-    "label" : {
-      "IRI-based" : "hasPurpose",
-      "en" : "hasPurpose"
-    },
-    "domain" : "1",
-    "comment" : {
-      "undefined" : "The rationale for the mapping artefact being created."
-    },
-    "attributes" : [ "datatype" ],
-    "id" : "26"
-  }, {
-    "range" : "15",
-    "domain" : "8",
-    "attributes" : [ "anonymous", "object" ],
-    "id" : "28"
-  }, {
-    "range" : "15",
-    "domain" : "16",
-    "attributes" : [ "anonymous", "object" ],
-    "id" : "29"
-  }, {
-    "iri" : "https://www.w3.org/MQIO/#hasLocation",
-    "baseIri" : "https://www.w3.org/MQIO/",
-    "range" : "31",
-    "label" : {
-      "IRI-based" : "hasLocation",
-      "en" : "hasLocation"
-    },
-    "domain" : "8",
-    "comment" : {
-      "undefined" : "The location of a violation within the mapping."
-    },
-    "attributes" : [ "datatype" ],
-    "id" : "30"
-  }, {
-    "range" : "15",
-    "domain" : "17",
-    "attributes" : [ "anonymous", "object" ],
-    "id" : "32"
-  }, {
-    "range" : "2",
-    "domain" : "4",
-    "attributes" : [ "anonymous", "object" ],
-    "id" : "35"
-  }, {
-    "range" : "2",
-    "domain" : "3",
-    "attributes" : [ "anonymous", "object" ],
-    "id" : "36"
-  }, {
-    "iri" : "https://www.w3.org/MQIO/#hasResultMessage",
-    "baseIri" : "https://www.w3.org/MQIO/",
-    "range" : "41",
-    "label" : {
-      "IRI-based" : "hasResultMessage",
-      "en" : "hasResultMessage"
-    },
-    "domain" : "8",
-    "comment" : {
-      "undefined" : "A textual description of a violation."
-    },
-    "attributes" : [ "datatype" ],
-    "id" : "40"
-  }, {
-    "iri" : "https://www.w3.org/MQIO/#usedQuery",
-    "baseIri" : "https://www.w3.org/MQIO/",
-    "range" : "34",
-    "label" : {
-      "IRI-based" : "usedQuery",
-      "en" : "usedQuery"
-    },
-    "domain" : "3",
-    "comment" : {
-      "undefined" : "A query executed by a refinement."
-    },
-    "attributes" : [ "datatype" ],
-    "id" : "42"
-  }, {
-    "range" : "16",
-    "domain" : "3",
-    "attributes" : [ "anonymous", "object" ],
-    "id" : "43"
-  }, {
-    "range" : "17",
-    "domain" : "16",
-    "attributes" : [ "anonymous", "object" ],
-    "id" : "44"
-  }, {
-    "range" : "8",
-    "domain" : "16",
-    "attributes" : [ "anonymous", "object" ],
-    "id" : "45"
-  }, {
-    "range" : "16",
-    "domain" : "1",
-    "attributes" : [ "anonymous", "object" ],
-    "id" : "47"
-  }, {
-    "iri" : "https://www.w3.org/MQIO/#refinedViolation",
-    "baseIri" : "https://www.w3.org/MQIO/",
-    "range" : "8",
-    "label" : {
-      "IRI-based" : "refinedViolation",
-      "en" : "refinedViolation"
-    },
-    "domain" : "3",
-    "comment" : {
-      "undefined" : "The violation which was refined."
-    },
-    "attributes" : [ "object" ],
-    "id" : "19"
-  }, {
-    "range" : "16",
-    "domain" : "4",
-    "attributes" : [ "anonymous", "object" ],
-    "id" : "48"
-  }, {
-    "iri" : "https://www.w3.org/MQIO/#hasQualityRequirement",
-    "baseIri" : "https://www.w3.org/MQIO/",
-    "range" : "17",
-    "label" : {
-      "IRI-based" : "hasQualityRequirement",
-      "en" : "hasQualityRequirement"
-    },
-    "domain" : "4",
-    "comment" : {
-      "undefined" : "The quality requirements associated with a mapping assessment."
-    },
-    "attributes" : [ "object" ],
-    "id" : "50"
-  }, {
-    "iri" : "https://www.w3.org/MQIO/#isSatisfied",
-    "baseIri" : "https://www.w3.org/MQIO/",
-    "range" : "39",
-    "label" : {
-      "IRI-based" : "isSatisfied",
-      "en" : "isSatisfied"
-    },
-    "domain" : "17",
-    "comment" : {
-      "undefined" : "The status of the quality requirements associated with a mapping."
-    },
-    "attributes" : [ "datatype" ],
-    "id" : "51"
-  }, {
-    "iri" : "https://www.w3.org/MQIO/#hasRefinement",
-    "baseIri" : "https://www.w3.org/MQIO/",
-    "range" : "3",
-    "label" : {
-      "IRI-based" : "hasRefinement",
-      "en" : "hasRefinement"
-    },
-    "domain" : "10",
-    "comment" : {
-      "undefined" : "The refinement used for refining a quality violation detected by a specific quality metric."
-    },
-    "attributes" : [ "object" ],
-    "id" : "52"
-  }, {
-    "iri" : "https://www.w3.org/MQIO/#wasCreatedBy",
-    "baseIri" : "https://www.w3.org/MQIO/",
-    "range" : "46",
+    "iri" : "https://www.w3id.org/MQIO#wasCreatedBy",
+    "baseIri" : "https://www.w3id.org/MQIO",
+    "range" : "7",
     "label" : {
       "IRI-based" : "wasCreatedBy",
       "en" : "wasCreatedBy"
     },
-    "domain" : "1",
+    "domain" : "6",
     "comment" : {
       "undefined" : "The agent or mapping quality refinement process which produced the mapping artefact."
     },
     "attributes" : [ "object" ],
-    "id" : "54"
+    "id" : "5"
   }, {
-    "iri" : "https://www.w3.org/MQIO/#usedTool",
-    "baseIri" : "https://www.w3.org/MQIO/",
-    "range" : "33",
-    "label" : {
-      "IRI-based" : "usedTool",
-      "en" : "usedTool"
-    },
-    "domain" : "1",
-    "comment" : {
-      "undefined" : "A tool which has been used to create a mapping."
-    },
-    "attributes" : [ "datatype" ],
-    "id" : "55"
-  }, {
-    "iri" : "https://www.w3.org/MQIO/#hasRefinementName",
-    "baseIri" : "https://www.w3.org/MQIO/",
-    "range" : "38",
+    "iri" : "https://www.w3id.org/MQIO#hasRefinementName",
+    "baseIri" : "https://www.w3id.org/MQIO",
+    "range" : "14",
     "label" : {
       "IRI-based" : "hasRefinementName",
       "en" : "hasRefinementName"
     },
-    "domain" : "3",
+    "domain" : "1",
     "comment" : {
       "undefined" : "A textual description of a refinement."
     },
     "attributes" : [ "datatype" ],
-    "id" : "56"
+    "id" : "13"
   }, {
-    "iri" : "https://www.w3.org/MQIO/#assessedMapping",
-    "baseIri" : "https://www.w3.org/MQIO/",
+    "iri" : "https://www.w3id.org/MQIO#usedTool",
+    "baseIri" : "https://www.w3id.org/MQIO",
+    "range" : "11",
+    "label" : {
+      "IRI-based" : "usedTool",
+      "en" : "usedTool"
+    },
+    "domain" : "6",
+    "comment" : {
+      "undefined" : "A tool which has been used to create a mapping."
+    },
+    "attributes" : [ "object" ],
+    "id" : "15"
+  }, {
+    "iri" : "https://www.w3id.org/MQIO#hasLiteralValue",
+    "baseIri" : "https://www.w3id.org/MQIO",
+    "range" : "17",
+    "label" : {
+      "IRI-based" : "hasLiteralValue",
+      "en" : "hasLiteralValue"
+    },
+    "domain" : "10",
+    "comment" : {
+      "undefined" : "The literal value associated with the violation."
+    },
+    "attributes" : [ "datatype" ],
+    "id" : "16"
+  }, {
+    "range" : "8",
+    "domain" : "12",
+    "attributes" : [ "anonymous", "object" ],
+    "id" : "18"
+  }, {
+    "iri" : "https://www.w3id.org/MQIO#inTripleMap",
+    "baseIri" : "https://www.w3id.org/MQIO",
+    "range" : "20",
+    "label" : {
+      "IRI-based" : "inTripleMap",
+      "en" : "inTripleMap"
+    },
+    "domain" : "10",
+    "comment" : {
+      "undefined" : "The triple map where the violation occurred."
+    },
+    "attributes" : [ "object" ],
+    "id" : "19"
+  }, {
+    "iri" : "https://www.w3id.org/MQIO#hasObjectValue",
+    "baseIri" : "https://www.w3id.org/MQIO",
+    "range" : "20",
+    "label" : {
+      "IRI-based" : "hasObjectValue",
+      "en" : "hasObjectValue"
+    },
+    "domain" : "10",
+    "comment" : {
+      "undefined" : "The object value associated with the violation."
+    },
+    "attributes" : [ "object" ],
+    "id" : "21"
+  }, {
+    "iri" : "https://www.w3id.org/MQIO#usedQuery",
+    "baseIri" : "https://www.w3id.org/MQIO",
+    "range" : "23",
+    "label" : {
+      "IRI-based" : "usedQuery",
+      "en" : "usedQuery"
+    },
+    "domain" : "1",
+    "comment" : {
+      "undefined" : "A query executed by a refinement."
+    },
+    "attributes" : [ "datatype" ],
+    "id" : "22"
+  }, {
+    "iri" : "https://www.w3id.org/MQIO#hasPurpose",
+    "baseIri" : "https://www.w3id.org/MQIO",
+    "range" : "25",
+    "label" : {
+      "IRI-based" : "hasPurpose",
+      "en" : "hasPurpose"
+    },
+    "domain" : "6",
+    "comment" : {
+      "undefined" : "The rationale for the mapping artefact being created."
+    },
+    "attributes" : [ "datatype" ],
+    "id" : "24"
+  }, {
+    "iri" : "https://www.w3id.org/MQIO#hasValidationReport",
+    "baseIri" : "https://www.w3id.org/MQIO",
+    "range" : "12",
+    "label" : {
+      "IRI-based" : "hasValidationReport",
+      "en" : "hasValidationReport"
+    },
+    "domain" : "2",
+    "comment" : {
+      "undefined" : "The mapping quality validation report generated by the quality assessment process."
+    },
+    "attributes" : [ "object" ],
+    "id" : "26"
+  }, {
+    "range" : "8",
+    "domain" : "10",
+    "attributes" : [ "anonymous", "object" ],
+    "id" : "27"
+  }, {
+    "range" : "8",
+    "domain" : "6",
+    "attributes" : [ "anonymous", "object" ],
+    "id" : "28"
+  }, {
+    "range" : "8",
+    "domain" : "11",
+    "attributes" : [ "anonymous", "object" ],
+    "id" : "29"
+  }, {
+    "range" : "0",
+    "domain" : "1",
+    "attributes" : [ "anonymous", "object" ],
+    "id" : "30"
+  }, {
+    "range" : "8",
+    "domain" : "9",
+    "attributes" : [ "anonymous", "object" ],
+    "id" : "31"
+  }, {
+    "range" : "0",
+    "domain" : "2",
+    "attributes" : [ "anonymous", "object" ],
+    "id" : "32"
+  }, {
+    "iri" : "https://www.w3id.org/MQIO#refinedViolation",
+    "baseIri" : "https://www.w3id.org/MQIO",
+    "range" : "10",
+    "label" : {
+      "IRI-based" : "refinedViolation",
+      "en" : "refinedViolation"
+    },
+    "domain" : "1",
+    "comment" : {
+      "undefined" : "The violation which was refined."
+    },
+    "attributes" : [ "object" ],
+    "id" : "33"
+  }, {
+    "iri" : "https://www.w3id.org/MQIO#isSatisfied",
+    "baseIri" : "https://www.w3id.org/MQIO",
+    "range" : "35",
+    "label" : {
+      "IRI-based" : "isSatisfied",
+      "en" : "isSatisfied"
+    },
+    "domain" : "9",
+    "comment" : {
+      "undefined" : "The status of the quality requirements associated with a mapping."
+    },
+    "attributes" : [ "datatype" ],
+    "id" : "37"
+  }, {
+    "range" : "12",
+    "domain" : "1",
+    "attributes" : [ "anonymous", "object" ],
+    "id" : "38"
+  }, {
+    "range" : "10",
+    "domain" : "12",
+    "attributes" : [ "anonymous", "object" ],
+    "id" : "39"
+  }, {
+    "range" : "9",
+    "domain" : "12",
+    "attributes" : [ "anonymous", "object" ],
+    "id" : "40"
+  }, {
+    "iri" : "https://www.w3id.org/MQIO#isDescribedBy",
+    "baseIri" : "https://www.w3id.org/MQIO",
+    "range" : "4",
+    "label" : {
+      "IRI-based" : "isDescribedBy",
+      "en" : "isDescribedBy"
+    },
+    "domain" : "10",
+    "comment" : {
+      "undefined" : "The quality metric which detected the violation."
+    },
+    "attributes" : [ "object" ],
+    "id" : "41"
+  }, {
+    "iri" : "https://www.w3id.org/MQIO#hasViolation",
+    "baseIri" : "https://www.w3id.org/MQIO",
+    "range" : "10",
+    "label" : {
+      "IRI-based" : "hasViolation",
+      "en" : "hasViolation"
+    },
+    "domain" : "12",
+    "comment" : {
+      "undefined" : "A mapping quality violation contained within a mapping validation report."
+    },
+    "attributes" : [ "object" ],
+    "id" : "44"
+  }, {
+    "iri" : "https://www.w3id.org/MQIO#wasRefinedBy",
+    "inverse" : "33",
+    "baseIri" : "https://www.w3id.org/MQIO",
     "range" : "1",
+    "label" : {
+      "IRI-based" : "wasRefinedBy",
+      "en" : "wasRefinedBy"
+    },
+    "domain" : "10",
+    "comment" : {
+      "undefined" : "The refinement used to refine a quality violation."
+    },
+    "attributes" : [ "object" ],
+    "id" : "45"
+  }, {
+    "iri" : "https://www.w3id.org/MQIO#hasResultMessage",
+    "baseIri" : "https://www.w3id.org/MQIO",
+    "range" : "36",
+    "label" : {
+      "IRI-based" : "hasResultMessage",
+      "en" : "hasResultMessage"
+    },
+    "domain" : "10",
+    "comment" : {
+      "undefined" : "A textual description of a violation."
+    },
+    "attributes" : [ "datatype" ],
+    "id" : "46"
+  }, {
+    "iri" : "https://www.w3id.org/MQIO#assessedMapping",
+    "baseIri" : "https://www.w3id.org/MQIO",
+    "range" : "6",
     "label" : {
       "IRI-based" : "assessedMapping",
       "en" : "assessedMapping"
     },
-    "domain" : "4",
+    "domain" : "2",
     "comment" : {
       "undefined" : "The mapping assessed by the quality assessment process."
     },
     "attributes" : [ "object" ],
-    "id" : "57"
+    "id" : "47"
+  }, {
+    "iri" : "https://www.w3id.org/MQIO#hasConfidence",
+    "baseIri" : "https://www.w3id.org/MQIO",
+    "range" : "42",
+    "label" : {
+      "IRI-based" : "hasConfidence",
+      "en" : "hasConfidence"
+    },
+    "domain" : "1",
+    "comment" : {
+      "undefined" : "The likelihood a refinement will resolve the violation."
+    },
+    "attributes" : [ "datatype" ],
+    "id" : "48"
+  }, {
+    "range" : "12",
+    "domain" : "6",
+    "attributes" : [ "anonymous", "object" ],
+    "id" : "49"
+  }, {
+    "range" : "12",
+    "domain" : "2",
+    "attributes" : [ "anonymous", "object" ],
+    "id" : "50"
+  }, {
+    "iri" : "https://www.w3id.org/MQIO#hasLocation",
+    "baseIri" : "https://www.w3id.org/MQIO",
+    "range" : "43",
+    "label" : {
+      "IRI-based" : "hasLocation",
+      "en" : "hasLocation"
+    },
+    "domain" : "10",
+    "comment" : {
+      "undefined" : "The location of a violation within the mapping."
+    },
+    "attributes" : [ "datatype" ],
+    "id" : "51"
+  }, {
+    "iri" : "https://www.w3id.org/MQIO#hasMappingSource",
+    "baseIri" : "https://www.w3id.org/MQIO",
+    "range" : "6",
+    "label" : {
+      "IRI-based" : "hasMappingSource",
+      "en" : "hasMappingSource"
+    },
+    "domain" : "6",
+    "comment" : {
+      "undefined" : "The original mapping artefact from which the refined mapping was derived."
+    },
+    "attributes" : [ "object", "transitive" ],
+    "id" : "52"
+  }, {
+    "iri" : "https://www.w3id.org/MQIO#hasQualityRequirement",
+    "baseIri" : "https://www.w3id.org/MQIO",
+    "range" : "9",
+    "label" : {
+      "IRI-based" : "hasQualityRequirement",
+      "en" : "hasQualityRequirement"
+    },
+    "domain" : "2",
+    "comment" : {
+      "undefined" : "The quality requirements associated with a mapping assessment."
+    },
+    "attributes" : [ "object" ],
+    "id" : "53"
+  }, {
+    "iri" : "https://www.w3id.org/MQIO#hasRefinement",
+    "baseIri" : "https://www.w3id.org/MQIO",
+    "range" : "1",
+    "label" : {
+      "IRI-based" : "hasRefinement",
+      "en" : "hasRefinement"
+    },
+    "domain" : "4",
+    "comment" : {
+      "undefined" : "The refinement used for refining a quality violation detected by a specific quality metric."
+    },
+    "attributes" : [ "object" ],
+    "id" : "54"
   } ]
 }

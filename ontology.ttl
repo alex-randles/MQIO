@@ -1,22 +1,22 @@
-@prefix : <https://w3id.org/MQIO#> .
+@prefix : <https://www.w3id.org/MQIO#> .
 @prefix owl: <http://www.w3.org/2002/07/owl#> .
 @prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
 @prefix xml: <http://www.w3.org/XML/1998/namespace> .
 @prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
 @prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
-@base <https://w3id.org/MQIO#> .
+@base <https://www.w3id.org/MQIO#> .
 
-<https://w3id.org/MQIO#> rdf:type owl:Ontology ;
-                             <http://purl.org/dc/terms/abstract> "The Mapping Quality Improvement Ontology (MQIO) provides a set of classes, properties, and restrictions that can be used to represent and interchange provenance and metadata information relating to the creation, quality assessment, refinement and validation of mapping artefacts used to link and generate linked data datasets. It can also be specialized to create new classes and properties to model provenance and metadata information for domain specific mapping languages." ;
-                             <http://purl.org/dc/terms/created> "1 June 2020" ;
-                             <http://purl.org/dc/terms/creator> "Ademar Crotti Junior" ,
-                                                                "Alex Randles" ,
-                                                                "Declan O'Sullivan" ;
-                             <http://purl.org/dc/terms/license> "http://creativecommons.org/publicdomain/zero/1.0/" ;
-                             <http://purl.org/dc/terms/title> "Mapping Quality Improvement Ontology (MQIO)" ;
-                             <http://purl.org/vocab/vann/preferredNamespacePrefix> "mqio" ;
-                             <http://purl.org/vocab/vann/preferredNamespaceUri> "https://w3id.org/MQIO#" ;
-                             owl:versionInfo "1 June 2020" .
+<https://www.w3id.org/MQIO#> rdf:type owl:Ontology ;
+                              <http://purl.org/dc/terms/abstract> "The Mapping Quality Improvement Ontology (MQIO) provides a set of classes, properties, and restrictions that can be used to represent and interchange provenance and metadata information relating to the creation, quality assessment, refinement and validation of mapping artefacts used to link and generate linked data datasets. It can also be specialized to create new classes and properties to model provenance and metadata information for domain specific mapping languages.nges that have occured within the source data of an RDF dataset. The ontology allows a notification policy to be defined which will notify users when a defined threshold of changes has been reached. Once notified the mapping and source data should be re-examined to ensure no further action is required to prevent a decrease in quality. This ontology is licensed under the Attribution (CC BY) License." ;
+                              <http://purl.org/dc/terms/created> "01 May 2023" ;
+                              <http://purl.org/dc/terms/creator> "Ademar Crotti Junior" ,
+                                                                 "Alex Randles" ,
+                                                                 "Declan O'Sullivan" ;
+                              <http://purl.org/dc/terms/license> <http://creativecommons.org/publicdomain/zero/1.0/> ;
+                              <http://purl.org/dc/terms/title> "Mapping Quality Improvement Ontology (MQIO)" ;
+                              <http://purl.org/vocab/vann/preferredNamespacePrefix> "mqio:" ;
+                              <http://purl.org/vocab/vann/preferredNamespaceUri> "https://www.w3id.org/MQIO/#" ;
+                              owl:versionInfo "v1.3" .
 
 #################################################################
 #    Annotation properties
@@ -62,7 +62,7 @@
 #    Object Properties
 #################################################################
 
-###  https://www.w3.org/MQIO/#assessedMapping
+###  https://www.w3id.org/MQIO#assessedMapping
 :assessedMapping rdf:type owl:ObjectProperty ;
                  rdfs:domain :MappingAssessment ;
                  rdfs:range :MappingArtefact ;
@@ -70,7 +70,7 @@
                  rdfs:label "assessedMapping"@en .
 
 
-###  https://www.w3.org/MQIO/#hasMappingSource
+###  https://www.w3id.org/MQIO#hasMappingSource
 :hasMappingSource rdf:type owl:ObjectProperty ,
                            owl:TransitiveProperty ;
                   rdfs:domain :MappingArtefact ;
@@ -79,7 +79,7 @@
                   rdfs:label "hasMappingSource"@en .
 
 
-###  https://www.w3.org/MQIO/#hasObjectValue
+###  https://www.w3id.org/MQIO#hasObjectValue
 :hasObjectValue rdf:type owl:ObjectProperty ;
                 rdfs:domain :MappingViolation ;
                 rdfs:range rdfs:Resource ;
@@ -87,7 +87,7 @@
                 rdfs:label "hasObjectValue"@en .
 
 
-###  https://www.w3.org/MQIO/#hasQualityRequirement
+###  https://www.w3id.org/MQIO#hasQualityRequirement
 :hasQualityRequirement rdf:type owl:ObjectProperty ;
                        rdfs:domain :MappingAssessment ;
                        rdfs:range :QualityRequirement ;
@@ -95,7 +95,7 @@
                        rdfs:label "hasQualityRequirement"@en .
 
 
-###  https://www.w3.org/MQIO/#hasRefinement
+###  https://www.w3id.org/MQIO#hasRefinement
 :hasRefinement rdf:type owl:ObjectProperty ;
                rdfs:domain <http://www.w3.org/ns/dqv#Metric> ;
                rdfs:range :MappingRefinement ;
@@ -103,7 +103,7 @@
                rdfs:label "hasRefinement"@en .
 
 
-###  https://www.w3.org/MQIO/#hasValidationReport
+###  https://www.w3id.org/MQIO#hasValidationReport
 :hasValidationReport rdf:type owl:ObjectProperty ;
                      rdfs:domain :MappingAssessment ;
                      rdfs:range :MappingValidationReport ;
@@ -111,7 +111,7 @@
                      rdfs:label "hasValidationReport"@en .
 
 
-###  https://www.w3.org/MQIO/#hasViolation
+###  https://www.w3id.org/MQIO#hasViolation
 :hasViolation rdf:type owl:ObjectProperty ;
               rdfs:domain :MappingValidationReport ;
               rdfs:range :MappingViolation ;
@@ -119,7 +119,7 @@
               rdfs:label "hasViolation"@en .
 
 
-###  https://www.w3.org/MQIO/#inTripleMap
+###  https://www.w3id.org/MQIO#inTripleMap
 :inTripleMap rdf:type owl:ObjectProperty ;
              rdfs:domain :MappingViolation ;
              rdfs:range rdfs:Resource ;
@@ -127,7 +127,7 @@
              rdfs:label "inTripleMap"@en .
 
 
-###  https://www.w3.org/MQIO/#isDescribedBy
+###  https://www.w3id.org/MQIO#isDescribedBy
 :isDescribedBy rdf:type owl:ObjectProperty ;
                rdfs:domain :MappingViolation ;
                rdfs:range <http://www.w3.org/ns/dqv#Metric> ;
@@ -135,7 +135,7 @@
                rdfs:label "isDescribedBy"@en .
 
 
-###  https://www.w3.org/MQIO/#refinedViolation
+###  https://www.w3id.org/MQIO#refinedViolation
 :refinedViolation rdf:type owl:ObjectProperty ;
                   rdfs:domain :MappingRefinement ;
                   rdfs:range :MappingViolation ;
@@ -143,7 +143,15 @@
                   rdfs:label "refinedViolation"@en .
 
 
-###  https://www.w3.org/MQIO/#wasCreatedBy
+###  https://www.w3id.org/MQIO#usedTool
+:usedTool rdf:type owl:ObjectProperty ;
+          rdfs:domain :MappingArtefact ;
+          rdfs:range :MappingTool ;
+          rdfs:comment "A tool which has been used to create a mapping." ;
+          rdfs:label "usedTool"@en .
+
+
+###  https://www.w3id.org/MQIO#wasCreatedBy
 :wasCreatedBy rdf:type owl:ObjectProperty ;
               rdfs:domain :MappingArtefact ;
               rdfs:range [ rdf:type owl:Class ;
@@ -155,7 +163,7 @@
               rdfs:label "wasCreatedBy"@en .
 
 
-###  https://www.w3.org/MQIO/#wasExecuted
+###  https://www.w3id.org/MQIO#wasExecuted
 :wasExecuted rdf:type owl:ObjectProperty ;
              rdfs:domain :MappingAssessment ;
              rdfs:range <http://www.w3.org/ns/dqv#Metric> ;
@@ -163,7 +171,7 @@
              rdfs:label "wasExecuted"@en .
 
 
-###  https://www.w3.org/MQIO/#wasRefinedBy
+###  https://www.w3id.org/MQIO#wasRefinedBy
 :wasRefinedBy rdf:type owl:ObjectProperty ;
               owl:inverseOf :refinedViolation ;
               rdfs:domain :MappingViolation ;
@@ -176,7 +184,7 @@
 #    Data properties
 #################################################################
 
-###  https://www.w3.org/MQIO/#hasConfidence
+###  https://www.w3id.org/MQIO#hasConfidence
 :hasConfidence rdf:type owl:DatatypeProperty ;
                rdfs:domain :MappingRefinement ;
                rdfs:range xsd:double ;
@@ -184,7 +192,7 @@
                rdfs:label "hasConfidence"@en .
 
 
-###  https://www.w3.org/MQIO/#hasLiteralValue
+###  https://www.w3id.org/MQIO#hasLiteralValue
 :hasLiteralValue rdf:type owl:DatatypeProperty ;
                  rdfs:domain :MappingViolation ;
                  rdfs:range xsd:string ;
@@ -192,7 +200,7 @@
                  rdfs:label "hasLiteralValue"@en .
 
 
-###  https://www.w3.org/MQIO/#hasLocation
+###  https://www.w3id.org/MQIO#hasLocation
 :hasLocation rdf:type owl:DatatypeProperty ;
              rdfs:domain :MappingViolation ;
              rdfs:range xsd:string ;
@@ -200,7 +208,7 @@
              rdfs:label "hasLocation"@en .
 
 
-###  https://www.w3.org/MQIO/#hasPurpose
+###  https://www.w3id.org/MQIO#hasPurpose
 :hasPurpose rdf:type owl:DatatypeProperty ;
             rdfs:domain :MappingArtefact ;
             rdfs:range xsd:string ;
@@ -208,7 +216,7 @@
             rdfs:label "hasPurpose"@en .
 
 
-###  https://www.w3.org/MQIO/#hasRefinementName
+###  https://www.w3id.org/MQIO#hasRefinementName
 :hasRefinementName rdf:type owl:DatatypeProperty ;
                    rdfs:domain :MappingRefinement ;
                    rdfs:range xsd:string ;
@@ -216,7 +224,7 @@
                    rdfs:label "hasRefinementName"@en .
 
 
-###  https://www.w3.org/MQIO/#hasResultMessage
+###  https://www.w3id.org/MQIO#hasResultMessage
 :hasResultMessage rdf:type owl:DatatypeProperty ;
                   rdfs:domain :MappingViolation ;
                   rdfs:range xsd:string ;
@@ -224,7 +232,7 @@
                   rdfs:label "hasResultMessage"@en .
 
 
-###  https://www.w3.org/MQIO/#isSatisfied
+###  https://www.w3id.org/MQIO#isSatisfied
 :isSatisfied rdf:type owl:DatatypeProperty ;
              rdfs:domain :QualityRequirement ;
              rdfs:range xsd:boolean ;
@@ -232,20 +240,12 @@
              rdfs:label "isSatisfied"@en .
 
 
-###  https://www.w3.org/MQIO/#usedQuery
+###  https://www.w3id.org/MQIO#usedQuery
 :usedQuery rdf:type owl:DatatypeProperty ;
            rdfs:domain :MappingRefinement ;
            rdfs:range xsd:string ;
            rdfs:comment "A query executed by a refinement." ;
            rdfs:label "usedQuery"@en .
-
-
-###  https://www.w3.org/MQIO/#usedTool
-:usedTool rdf:type owl:DatatypeProperty ;
-          rdfs:domain :MappingArtefact ;
-          rdfs:range xsd:string ;
-          rdfs:comment "A tool which has been used to create a mapping." ;
-          rdfs:label "usedTool"@en .
 
 
 #################################################################
@@ -256,20 +256,8 @@
 rdfs:Resource rdf:type owl:Class .
 
 
-###  http://www.w3.org/ns/dqv#Category
-<http://www.w3.org/ns/dqv#Category> rdf:type owl:Class .
-
-
-###  http://www.w3.org/ns/dqv#Dimension
-<http://www.w3.org/ns/dqv#Dimension> rdf:type owl:Class .
-
-
 ###  http://www.w3.org/ns/dqv#Metric
 <http://www.w3.org/ns/dqv#Metric> rdf:type owl:Class .
-
-
-###  http://www.w3.org/ns/dqv#QualityMeasurement
-<http://www.w3.org/ns/dqv#QualityMeasurement> rdf:type owl:Class .
 
 
 ###  http://www.w3.org/ns/prov#Activity
@@ -280,15 +268,11 @@ rdfs:Resource rdf:type owl:Class .
 <http://www.w3.org/ns/prov#Agent> rdf:type owl:Class .
 
 
-###  http://www.w3.org/ns/prov#Collection
-<http://www.w3.org/ns/prov#Collection> rdf:type owl:Class .
-
-
 ###  http://www.w3.org/ns/prov#Entity
 <http://www.w3.org/ns/prov#Entity> rdf:type owl:Class .
 
 
-###  https://www.w3.org/MQIO/#MappingArtefact
+###  https://www.w3id.org/MQIO#MappingArtefact
 :MappingArtefact rdf:type owl:Class ;
                  rdfs:subClassOf <http://www.w3.org/ns/prov#Entity> ;
                  owl:disjointWith :MappingValidationReport ;
@@ -296,7 +280,7 @@ rdfs:Resource rdf:type owl:Class .
                  rdfs:label "MappingArtefact"@en .
 
 
-###  https://www.w3.org/MQIO/#MappingAssessment
+###  https://www.w3id.org/MQIO#MappingAssessment
 :MappingAssessment rdf:type owl:Class ;
                    rdfs:subClassOf <http://www.w3.org/ns/prov#Activity> ;
                    owl:disjointWith :MappingValidationReport ;
@@ -304,7 +288,7 @@ rdfs:Resource rdf:type owl:Class .
                    rdfs:label "MappingAssessment"@en .
 
 
-###  https://www.w3.org/MQIO/#MappingRefinement
+###  https://www.w3id.org/MQIO#MappingRefinement
 :MappingRefinement rdf:type owl:Class ;
                    rdfs:subClassOf <http://www.w3.org/ns/prov#Activity> ;
                    owl:disjointWith :MappingValidationReport ;
@@ -312,7 +296,14 @@ rdfs:Resource rdf:type owl:Class .
                    rdfs:label "MappingRefinement"@en .
 
 
-###  https://www.w3.org/MQIO/#MappingValidationReport
+###  https://www.w3id.org/MQIO#MappingTool
+:MappingTool rdf:type owl:Class ;
+             rdfs:subClassOf <http://www.w3.org/ns/prov#Entity> ;
+             rdfs:comment "A mapping tool is any tool used during the creation of a mapping." ;
+             rdfs:label "MappingTool"@en .
+
+
+###  https://www.w3id.org/MQIO#MappingValidationReport
 :MappingValidationReport rdf:type owl:Class ;
                          rdfs:subClassOf <http://www.w3.org/ns/prov#Entity> ;
                          owl:disjointWith :MappingViolation ,
@@ -321,14 +312,14 @@ rdfs:Resource rdf:type owl:Class .
                          rdfs:label "MappingValidationReport"@en .
 
 
-###  https://www.w3.org/MQIO/#MappingViolation
+###  https://www.w3id.org/MQIO#MappingViolation
 :MappingViolation rdf:type owl:Class ;
                   rdfs:subClassOf <http://www.w3.org/ns/prov#Entity> ;
                   rdfs:comment "A mapping violation is a quality issue present within a mapping." ;
                   rdfs:label "MappingViolation"@en .
 
 
-###  https://www.w3.org/MQIO/#QualityRequirement
+###  https://www.w3id.org/MQIO#QualityRequirement
 :QualityRequirement rdf:type owl:Class ;
                     rdfs:subClassOf <http://www.w3.org/ns/prov#Entity> ;
                     rdfs:comment "A quality requirement is a requirement a mapping should satisfy." ;

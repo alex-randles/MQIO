@@ -11,7 +11,8 @@
 The <strong>SPARQL query</strong> shown below can be used to identify detected violations which have not be refined:
 <br>
 <pre>
-	<code>PREFIX mqio: &lt;https://www.w3id.org/MQIO#&gt;
+	<code>
+PREFIX mqio: &lt;https://www.w3id.org/MQIO#&gt;
 SELECT ?violation ?refinement
 WHERE {
   ?mappingAssessment a mqio:MappingAssessment ;
@@ -35,13 +36,14 @@ WHERE {
 @prefix dqv: &lt;http://www.w3.org/ns/dqv#&gt;.
 
 ex:validateQualityRequirements
-    a sh:NodeShape ;
-    sh:targetClass mqio:QualityRequirement ;
-    sh:property [
+	a sh:NodeShape ;
+	sh:targetClass mqio:QualityRequirement ;
+	sh:property [
 		sh:path dqv:hasQualityMeasurement  ;
 		sh:minCount 1;
-		sh:message "No measurements associated with this quality requirement." ;
-    ] .
+		sh:message """No measurements associated 
+		            with this quality requirement.""" ;
+	] .
     </code>
     </pre>
 </td>
@@ -59,7 +61,8 @@ ex:validateQualityViolations
     sh:property [
 		sh:path mqio:wasRefinedBy  ;
 		sh:minCount 1;
-		sh:message "No refinements associated with this quality violation." ;
+		sh:message """No refinements associated with 
+		              this quality violation.""" ;
     ] .
 </code>
      </pre>
